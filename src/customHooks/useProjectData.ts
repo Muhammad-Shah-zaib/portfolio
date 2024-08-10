@@ -1,21 +1,7 @@
 import { useMemo } from "react";
+import { ProjectCollection } from "../interfaces/projectInterfaces";
 
-interface TechStack {
-  frontend?: string[];
-  backend?: string[];
-  database?: string[];
-}
 
-interface ProjectData {
-  name: string;
-  description: string;
-  techStack: TechStack;
-  imagePath?: string;
-}
-
-interface ProjectCollection {
-  [key: string]: ProjectData;
-}
 
 const useProjectData = (): ProjectCollection => {
   // defining the projects
@@ -30,7 +16,23 @@ const useProjectData = (): ProjectCollection => {
           backend: ["DotnetCore Web API", "C#"],
           database: ["MS SQL Server"],
         },
+        githubRepoLink:
+          "https://github.com/Muhammad-Shah-zaib/FundRaisingDashboard",
         imagePath: "NFRW-landing-page.jpeg",
+
+      },
+      // Add more projects here
+      noteboard: {
+        name: "Noteboard",
+        description:
+          "Noteboard, a React-based web application designed for managing and organizing your notes and whiteboards",
+        techStack: {
+          frontend: ["React", "TypeScript", "uiw-markdown-editor", "Redux.js"],
+          backend: [".NET Core", "C#"],
+          database: ["MySQL"],
+        },
+        githubRepoLink: "https://github.com/Muhammad-Shah-zaib/NoteBoard",
+        imagePath: "noteboard-whiteboard-drawing.jpeg",
       },
     }),
     []

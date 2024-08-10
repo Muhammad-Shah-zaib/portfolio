@@ -6,7 +6,7 @@ interface CodeProps {
 function Code({ children }: CodeProps) {
   return (
       <span
-        className={`transition-all duration-200 bg-zinc-600  py-0.5 px-2 text-sm text-red-400 dark:text-zinc-950 dark:font-bold rounded-full`}
+        className={`transition-all duration-200 bg-sky-800 dark:bg-sky-200  py-0.5 px-2 text-sm text-blue-100 dark:text-sky-900 dark:font-black rounded-full`}
       >
         {children}
       </span>

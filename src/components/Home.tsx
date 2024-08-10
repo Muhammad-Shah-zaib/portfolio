@@ -1,13 +1,12 @@
 import TypingEffect from "react-typing-effect";
 import mainAvatarSvg from "../assets/main-avatar.svg";
-import ContactMeBtn from "../shared/buttons/ContactMeBtn";
 import Code from "../shared/components/Code";
 import { motion } from "framer-motion";
 
 function Home() {
   return (
     <div
-      id="home-div"
+      id="home"
       className="cursor-default transition-all duration-200 min-w-screen min-h-screen flex justify-center items-center"
     >
       {/* AVATAR CTN */}
@@ -62,7 +61,6 @@ function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.5 }}
         >
-          <ContactMeBtn />
         </motion.div>
       </motion.div>
     </div>

@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 function AboutMe() {
   return (
-    <div className="w-screen font-roboto min-h-screen flex flex-col items-center justify-center">
+    <section id="about" className="w-screen font-roboto min-h-screen flex flex-col items-center justify-center">
       <motion.div
         initial={{ opacity: 0, scale: 0.2, y: 10 }}
-        transition={{ type: "spring", delay: 0.2, stiffness: 260, damping: 20 }}
+        transition={{ type: "spring", delay: 0.1, stiffness: 260, damping: 20 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
         viewport={{ once: true}}
         className={`max-w-[250px] sm:max-w-[320px] md:max-w-[560px]`}
@@ -41,7 +41,7 @@ function AboutMe() {
           <DownloadResumeBtn />
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 }
 

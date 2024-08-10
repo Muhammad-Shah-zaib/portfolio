@@ -2,31 +2,40 @@ import React from "react";
 import Code from "../../shared/components/Code";
 import newLinkSvg from "../../assets/new-link.svg";
 import { motion } from "framer-motion";
-
-// Define interfaces for the tech stack
-export interface TechStack {
-  frontend?: string[];
-  backend?: string[];
-  database?: string[];
-}
+import { TechStack } from "../../interfaces/projectInterfaces";
 
 // Define the props interface for the ProjectCard component
 export interface ProjectCardProps {
   name: string;
   description: string;
   techStack: TechStack;
+  githubRepoLink: string;
   imagePath?: string;
+  layout?: "IMAGE_FIRST" | "CONTENT_FIRST"; // Add layout prop
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   name,
   description,
   techStack,
+  githubRepoLink,
   imagePath,
+  layout = "CONTENT_FIRST", // Default to CONTENT_FIRST layout
 }) => {
   return (
-    <>
-      <div className="flex flex-col justify-center gap-8 py-2">
+    <div
+      className={`flex ${
+        layout === "IMAGE_FIRST" ? "flex-row-reverse" : "flex-row"
+      } justify-center gap-8 py-2`}
+    >
+      {/* Content Section */}
+      <motion.div
+        initial={{ opacity: 0, x: layout === "IMAGE_FIRST" ? 20 : -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className="flex flex-col gap-4"
+      >
+        {/* HEADER - TITLE AND REPO LINK */}
         <div className="flex justify-between">
           {/* PROJECT NAME */}
           <span>
@@ -37,10 +46,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {/* PROJECT REPO LINK */}
           <motion.span
             animate={{ rotate: 0.8 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.2, delay: 0.2 }}
             whileHover={{ scale: 1.2 }}
           >
-            <a href="https://github.com/Muhammad-Shah-zaib/FundRaisingDashboard" target="_blank">
+            <a href={githubRepoLink} target="_blank" rel="noopener noreferrer">
               <img src={newLinkSvg} alt="Repo link" />
             </a>
           </motion.span>
@@ -83,9 +92,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             </>
           )}
         </span>
-      </div>
-      <div>{imagePath && <img src={imagePath} alt={`${name}-image`} />}</div>
-    </>
+      </motion.div>
+      {/* Image Section */}
+      <motion.div
+        initial={{ opacity: 0, x: layout === "IMAGE_FIRST" ? -20 : 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        {imagePath && <img src={imagePath} alt={`${name}-image`} />}
+      </motion.div>
+    </div>
   );
 };
 
