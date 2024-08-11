@@ -2,7 +2,8 @@ import ContactMeForm from "../forms/ContactMeForm";
 
 function ContactMe() {
   return (
-    <div
+    <section
+      id="contact-me"
       className={`font-roboto min-h-screen min-w-screen flex flex-col gap-10 items-center justify-center`}
     >
       <div className={`select-none flex flex-col gap-1 items-center`}>
@@ -12,7 +13,7 @@ function ContactMe() {
         </span>
       </div>
       <ContactMeForm />
-    </div>
+    </section>
   );
 }
 

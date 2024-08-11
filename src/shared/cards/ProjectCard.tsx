@@ -69,7 +69,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <>
               <strong className="text-xl">. </strong> Frontend:{" "}
               {techStack.frontend.map((tech, index) => (
-                <Code key={index}>{tech}</Code>
+                <>
+                  <Code key={index}>{tech}</Code>{" "}
+                </>
               ))}
               <br />
             </>
@@ -78,7 +80,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <>
               <strong className="text-xl">.</strong> Backend:{" "}
               {techStack.backend.map((tech, index) => (
-                <Code key={index}>{tech}</Code>
+                <>
+                  <Code key={index}>{tech}</Code>{" "}
+                </>
               ))}
               <br />
             </>
@@ -87,7 +91,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <>
               <strong className="text-xl">.</strong> Database:{" "}
               {techStack.database.map((tech, index) => (
-                <Code key={index}>{tech}</Code>
+                <>
+                  <Code key={index}>{tech}</Code>{" "}
+                </>
               ))}
             </>
           )}

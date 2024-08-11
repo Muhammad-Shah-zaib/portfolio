@@ -14,7 +14,7 @@ const Services: React.FC = () => {
         <div className="absolute inset-0 -top-5 lg:-inset-20">
           {/* Animated Arrow */}
           <motion.div
-            animate={{ y: [0, -10, 0] }} // Bouncing effect
+            animate={{ y: [0, -10, 0] }}
             transition={{
               duration: 1,
               ease: "easeInOut",
