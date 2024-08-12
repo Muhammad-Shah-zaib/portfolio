@@ -13,7 +13,7 @@ function Footer() {
       .then(() => {
         toast.success("Email copied to clipboard!", {
           position: "bottom-center",
-          autoClose: 5000,
+          autoClose: 2000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,

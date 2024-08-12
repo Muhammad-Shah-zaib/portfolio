@@ -20,7 +20,7 @@ function App() {
       <Services />
       <ContactMe />
       <Footer />
-      <ToastContainer theme={isDarkTheme ? "dark": "light"} />
+      <ToastContainer theme={isDarkTheme ? "dark": "light"} position="bottom-center" />
     </div>
   );
 }
