@@ -10,17 +10,24 @@ import "react-toastify/dist/ReactToastify.css";
 import { useAppSelector } from "./store/store";
 
 function App() {
-    const isDarkTheme = useAppSelector(state => state.themeSlice.isDarkTheme)
+  const isDarkTheme = useAppSelector((state) => state.themeSlice.isDarkTheme);
   return (
-    <div className="overflow-x-hidden dark:bg-primary bg-secondary transition-all duration-200 text-zinc-950 dark:text-zinc-200">
-      <HeaderContainer />
+    <div className="flex flex-col gap-4 overflow-x-hidden dark:bg-primary bg-secondary transition-all duration-200 text-zinc-950 dark:text-zinc-200">
+      <div>
+        <HeaderContainer />
+      </div>
       <Home />
       <AboutMe />
       <Projects />
       <Services />
       <ContactMe />
-      <Footer />
-      <ToastContainer theme={isDarkTheme ? "dark": "light"} position="bottom-center" />
+      <div>
+        <Footer />
+        <ToastContainer
+          theme={isDarkTheme ? "dark" : "light"}
+          position="bottom-center"
+        />
+      </div>
     </div>
   );
 }

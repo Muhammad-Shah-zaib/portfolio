@@ -8,7 +8,7 @@ const useProjectData = (): ProjectCollection => {
   const projects = useMemo(
     () => ({
       nfrw: {
-        name: "NFRW - Nust Funds Raising Website",
+        name: "NFRW",
         description:
           "A central platform to collect donations for the needy student studying at NUST, specifically designed for NUST.",
         techStack: {

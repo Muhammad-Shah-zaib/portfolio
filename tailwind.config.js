@@ -4,9 +4,12 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        xs: "425px",
+      },
       colors: {
         primary: "#1A1A1A",
-        secondary: "#E0E8F6"
+        secondary: "#E0E8F6",
       },
       fontFamily: {
         dancing: ["Dancing Script", "cursive"],

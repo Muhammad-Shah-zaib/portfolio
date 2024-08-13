@@ -4,7 +4,7 @@ function ContactMe() {
   return (
     <section
       id="contact-me"
-      className={`font-roboto min-h-screen min-w-screen flex flex-col gap-10 items-center justify-center`}
+      className={`font-roboto flex flex-col gap-10 items-center justify-center py-16`}
     >
       <div className={`select-none flex flex-col gap-1 items-center`}>
         <h2 className={`text-4xl font-bold font-biorhyme`}>Get In Touch</h2>

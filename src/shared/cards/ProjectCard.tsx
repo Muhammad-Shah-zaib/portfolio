@@ -25,8 +25,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   return (
     <div
       className={`flex ${
-        layout === "IMAGE_FIRST" ? "flex-row-reverse" : "flex-row"
-      } justify-center gap-8 py-2`}
+        layout === "IMAGE_FIRST" ? "lg:flex-row-reverse" : "lg:flex-row"
+      } justify-center gap-8 py-6 lg:py-2 flex-col-reverse border-b border-sky-800 dark:border-zinc-800 `}
     >
       {/* Content Section */}
       <motion.div
@@ -70,7 +70,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <strong className="text-xl">. </strong> Frontend:{" "}
               {techStack.frontend.map((tech, index) => (
                 <>
-                  <Code key={index}>{tech}</Code>{" "}
+                  <Code key={index}>{tech}</Code>
                 </>
               ))}
               <br />
@@ -105,7 +105,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        {imagePath && <img src={imagePath} alt={`${name}-image`} />}
+        {imagePath && (
+          <a href={githubRepoLink} target="_blank">
+            <img src={imagePath} alt={`${name}-image`} />
+          </a>
+        )}
       </motion.div>
     </div>
   );

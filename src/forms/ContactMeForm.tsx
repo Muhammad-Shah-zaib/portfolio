@@ -5,7 +5,7 @@ import handDrawnPersonWriting from "../assets/hand-drawn-person-writing.svg";
 import handDrawnPersonUsingPhone from "../assets/hand-drawn-person-using-phone.svg";
 import handDrawnWhirlingArrow from "../assets/hand-drawn-whirling-arrow.svg";
 import { motion } from "framer-motion";
-import { FaEnvelope } from "react-icons/fa";
+import { FaEnvelope, FaPaperPlane } from "react-icons/fa";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 
@@ -48,11 +48,11 @@ const ContactMeForm: React.FC = () => {
 
   return (
     <form
-      className="relative grid grid-cols-2 font-roboto w-full gap-4 max-w-[310px] sm:max-w-[450px] px-4"
+      className="relative md:grid flex flex-col gap-2 md:grid-cols-2 font-roboto w-full md:gap-4 max-w-[310px] sm:max-w-[450px] px-4"
       onSubmit={handleSubmit(onSubmit)}
     >
       {/* DRAWING */}
-      <div className="absolute bottom-0 left-0">
+      <div className="hidden md:block absolute bottom-0 left-0">
         <motion.div
           whileInView={{ opacity: [0, 0.5, 1], scale: [0.9, 1.1, 1] }}
           transition={{ delay: 0.2 }}
@@ -92,7 +92,7 @@ const ContactMeForm: React.FC = () => {
       {/* LASTNAME CTN */}
       <div className="relative flex flex-col w-full">
         {/* DRAWING */}
-        <div className="absolute top-2 -right-1/2">
+        <div className="hidden xs:block absolute top-2 -right-[30%] md:-right-[38%]">
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{
@@ -175,7 +175,7 @@ const ContactMeForm: React.FC = () => {
           animate={{ opacity: 0, x: -10 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="absolute top-0 -left-1/3 md:-left-1/4"
+          className="hidden xs:block absolute top-0 -left-1/3 md:-left-1/4"
         >
           <img
             src={handDrawnPersonWriting}
@@ -188,7 +188,7 @@ const ContactMeForm: React.FC = () => {
           animate={{ opacity: 0, x: 10 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-          className="absolute top-[70%] -right-1/3 md:-right-1/4"
+          className="hidden xs:block absolute top-[70%] -right-1/3 md:-right-1/4"
         >
           <img
             src={handDrawnPersonTyping}
@@ -224,8 +224,8 @@ const ContactMeForm: React.FC = () => {
           </>
         ) : (
           <>
-            Send Message
-            <FaEnvelope />
+            Send
+            <FaPaperPlane />
           </>
         )}
       </motion.button>

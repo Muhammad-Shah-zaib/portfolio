@@ -7,7 +7,7 @@ function Home() {
   return (
     <div
       id="home"
-      className="cursor-default transition-all duration-200 min-w-screen min-h-screen flex justify-center items-center"
+      className="pt-16 cursor-default transition-all duration-200  2xl:min-h-[70vh] min-h-[70vh] lg:min-h-[100vh] min-w-screen` flex justify-center items-center"
     >
       {/* AVATAR CTN */}
       <motion.div
@@ -46,12 +46,12 @@ function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.5 }}
-            className="flex flex-wrap justify-center transition-all duration-200 font-roboto md:text-base sm:text-sm text-center text-zinc-600 dark:text-zinc-500"
+            className="flex flex-wrap leading-relaxed justify-center transition-all duration-200 font-roboto md:text-base sm:text-sm text-center text-zinc-600 dark:text-zinc-500"
           >
             I am a web developer who loves to build web applications with &nbsp;
-              <Code>beautiful</Code>&nbsp;,&nbsp;<Code>responsive</Code>&nbsp;and&nbsp;
-              <Code>interactive</Code>{" "}
-            user interfaces.
+            <Code>beautiful</Code>&nbsp;,&nbsp;<Code>responsive</Code>
+            &nbsp;and&nbsp;
+            <Code>interactive</Code> user interfaces.
           </motion.span>
         </div>
 
@@ -60,8 +60,7 @@ function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: 0.5 }}
-        >
-        </motion.div>
+        ></motion.div>
       </motion.div>
     </div>
   );
