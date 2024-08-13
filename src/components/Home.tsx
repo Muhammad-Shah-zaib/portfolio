@@ -46,7 +46,7 @@ function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.5 }}
-            className="flex flex-wrap leading-relaxed justify-center transition-all duration-200 font-roboto md:text-base sm:text-sm text-center text-zinc-600 dark:text-zinc-500"
+            className="flex flex-wrap leading-relaxedP justify-center transition-all duration-200 font-roboto md:text-base sm:text-sm text-center text-zinc-600 dark:text-zinc-500"
           >
             I am a web developer who loves to build web applications with &nbsp;
             <Code>beautiful</Code>&nbsp;,&nbsp;<Code>responsive</Code>
