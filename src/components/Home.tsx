@@ -34,8 +34,6 @@ function Home() {
               eraseSpeed={50} // erasing speed
               eraseDelay={1000} // delay before starting to erase
               typingDelay={500} // delay before starting to type
-              cursorRenderer={(cursor: string) => <h3>{cursor}</h3>} // customize cursor if needed
-              displayTextRenderer={(text: string) => <h3>{text}</h3>}
             />
           </h3>
         </div>
