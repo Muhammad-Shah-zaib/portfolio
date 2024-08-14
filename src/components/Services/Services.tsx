@@ -61,7 +61,7 @@ const Services: React.FC = () => {
       <div className="w-full max-w-[310px] sm:max-w-[450px] md:max-w-[600px] lg:max-w-[960px]">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           <motion.div
-            drag={false}
+            drag={dragEnabled}
             variants={cardVariants.left}
             initial="hidden"
             whileInView="visible"
