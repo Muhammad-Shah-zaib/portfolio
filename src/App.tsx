@@ -8,9 +8,17 @@ import Services from "./components/Services/Services";
 import HeaderContainer from "./containers/HeaderContainer";
 import "react-toastify/dist/ReactToastify.css";
 import { useAppSelector } from "./store/store";
+import { useAppDispatch } from "./store/store";
+import { setInitialTheme } from "./store/theme/themeReducer";
+import { useEffect } from "react";
 
 function App() {
-  const isDarkTheme = useAppSelector((state) => state.themeSlice.isDarkTheme);
+  const isDarkTheme = useAppSelector(state => state.themeSlice.isDarkTheme);
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(setInitialTheme());
+  }, [])
+
   return (
     <div className="flex flex-col gap-4 overflow-x-hidden dark:bg-primary bg-secondary transition-all duration-200 text-zinc-950 dark:text-zinc-200">
       <div>
